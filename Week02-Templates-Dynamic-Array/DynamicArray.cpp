@@ -63,6 +63,34 @@ public:
 		size++;
 	}
 
+		void insert(const T& elem, size_t index)
+	{
+		if (index >= cap) return;
+		if (size == cap) resize();
+		for (size_t i = size; i > index; i--)
+		{
+			data[i] = data[i - 1];
+		}
+		data[index] = elem;
+		size++;
+	}
+
+	T& operator[](int index)
+	{
+		return data[index];
+	}
+
+	const T& operator[](int index) const
+	{
+		return data[index];
+	}
+
+	const T& at(int index) const 
+	{
+		if (index >= size) throw std::runtime_error("bad index");
+		return data[index];
+	}
+
 private:
 	T* data;
 	int size;
