@@ -90,7 +90,7 @@ int getPrec(char op) {
 }
 
 //task3
-std::string IntoPostfix(const std::string& input)
+std::string InfixToPostfix(const std::string& input)
 {
 	std::stack<char> st;
 	std::string output;
@@ -137,5 +137,5 @@ int main()
 {
 	std::string s;
 	std::cin >> s;
-	std::cout << calcRVP(IntoPostfix(s));
+	std::cout << calcRVP(InfixToPostfix(s));
 }
