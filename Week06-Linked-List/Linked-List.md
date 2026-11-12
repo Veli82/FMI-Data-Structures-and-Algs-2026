@@ -48,14 +48,14 @@ int main(){
  *     int value;
  *     Node* next;
 
- *     Node() : val(0), next(nullptr) {}
- *     Node(int x) : val(x), next(nullptr) {}
- *     Node(int x, Node *next) : val(x), next(next) {}
+ *     Node() : value(0), next(nullptr) {}
+ *     Node(int x) : value(x), next(nullptr) {}
+ *     Node(int x, Node *next) : value(x), next(next) {}
  * };
 ```
 За упражнение може да направите и шаблон на Node (вместо да е само с int)
 
-### Задача 1
+### Задача 0
 Реализирайте функциите от интерфейса на свързания списък. Направете го като клас или подавайте `Node* head` като първи аргумент във всяка функция.
 * **insertAfter(pos, val), removeAfter(pos) - О(1)**
 * **insertFirst(val), removeFirst() - O(1)**
