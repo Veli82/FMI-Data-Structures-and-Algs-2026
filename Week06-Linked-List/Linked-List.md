@@ -10,7 +10,6 @@
 * добавяне или премахване на елемент на което и да е място (при условие, че имаме итератор сочещ към това място) - **О(1)**:  
 **insertAfter(pos, val), removeAfter(pos)**
 * **insertFirst(val), removeFirst() - O(1)**
-* **pushFront(val), popFront() - O(1)**
 * **pushBack(val), popBack() - O(n)**
 * **isEmpty()** - проверява дали е празен - **О(1)**
 

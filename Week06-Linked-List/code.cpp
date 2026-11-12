@@ -86,28 +86,32 @@ node* removeAll(node* list, int value)
     return list;
 }
 
-// node* reverse(node* list)
-// {
-//     if (!list || !list->next) return list;
-//     node* curr = list;
-//     node* temp = curr->next->next;
-//     while (curr->next)
-//     {
-        
-//     }
-    
-// }
+node* reverse(node* list)
+{
+    if (!list || !list->next) return list;
+    node* prev = nullptr;
+    node* curr = list;
+    node* next = list->next;
+    while (curr)
+    {
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+    return prev;
+}
 
 
 int main()
 {
     node* n1 = new node(2,new node(3) );
     node* head = new node(1, n1);
-    node* list = new node(1, new node(2, new node(1, new node(1, new node(5)))));
+    node* list = new node(1, new node(2, new node(3, new node(4, new node(5)))));
     //insertAfter(n1, 8);
     //insertFront(head, 0);
     removeAfter(n1);
-    printList(removeAll(list, 1));
+    printList(reverse(list));
 
     
 }
