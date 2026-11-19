@@ -43,14 +43,14 @@ int main(){
 # Задачи
 **За задачите използвайте следната имплементация на node:**
 ```cpp
- * struct Node {
- *     int value;
- *     Node* next;
+struct Node {
+    int value;
+    Node* next;
 
- *     Node() : value(0), next(nullptr) {}
- *     Node(int x) : value(x), next(nullptr) {}
- *     Node(int x, Node *next) : value(x), next(next) {}
- * };
+    Node() : value(0), next(nullptr) {}
+    Node(int x) : value(x), next(nullptr) {}
+    Node(int x, Node *next) : value(x), next(next) {}
+};
 ```
 За упражнение може да направите и шаблон на Node (вместо да е само с int)
 
