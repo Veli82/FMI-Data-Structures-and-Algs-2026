@@ -53,7 +53,6 @@ void printList(node* head)
 
 node* insertFront(node* head, int val)
 {
-    if (!head) return head;
     node* newEl = new node(val, head);
     head = newEl;
     return head;
